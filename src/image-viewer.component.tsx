@@ -516,6 +516,16 @@ export default class ImageViewer extends React.Component<Props, State> {
               doubleClickInterval={this.props.doubleClickInterval}
             >
               {this!.props!.renderImage!(image.props)}
+              {this.props.watermarkUrl 
+                ?
+                  <Image 
+                    source={this.props.watermarkUrl}
+                    style={{position: 'absolute', height: '100%', width: '100%'}}
+                    resizeMode='contain'
+                  />
+                :
+                  null
+              }
             </ImageZoom>
           );
         case 'fail':
