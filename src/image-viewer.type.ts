@@ -12,6 +12,7 @@ export class Props {
    * 图片数组
    */
   public imageUrls: IImageInfo[] = [];
+  public watermarkUrl?: null;
 
   /**
    * 滑动到下一页的X阈值
